@@ -1,0 +1,26 @@
+<ion-content>
+  <div class='body'>
+    <div class='container'>
+      <header class='heading'>Project Satisfactory Survey</header>
+      <br>
+      <form [formGroup]='LoginForm' (ngSubmit)='onClick()'>
+          <label>Username</label>
+          <br>
+          <input type='text' style='width: 80%' placeholder="Enter your username" formControlName='username'>
+          <br>
+          <br>
+          <label>Password</label>
+          <br>
+          <input type='password' style='width: 80%' placeholder="Enter your password" formControlName='password'>
+          <br>
+          <br>
+          <ion-button color='#FFFF00' type='submit'>Login</ion-button>
+          <br/>
+          <p>Not an Administrator?</p>
+          <div style='text-align: center'>
+              <ion-button color='#FFFF00' type='button' (click)='proceedToSurvey()'>Proceed with the SURVEY</ion-button>
+          </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

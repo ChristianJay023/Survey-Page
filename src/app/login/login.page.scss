@@ -1,0 +1,62 @@
+
+.body {
+    background-image:url(https://images.pexels.com/photos/1638775/pexels-photo-1638775.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:100vh;
+    overflow:auto;
+}
+
+.container {
+    font-family:Roboto,sans-serif;
+    border-style: 1px solid grey;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px 3px #FFEBCD;
+    max-width: 400px;
+    padding-top: 10px;
+    height: 400px;
+    margin-top: 120px;
+    margin-left: 60%;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+input {
+    color: black;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 12px;
+    border-radius: 25px;
+}
+
+
+.heading{
+    text-decoration:bold;
+    text-align : center;
+    font-size:40px;
+    color:	#FFFF00;
+    padding-top:10px;
+    text-shadow: 1px 1px black;
+}
+
+ion-button {
+    background-color: #ffff33;
+    border: none;
+    color: black;
+    font-weight: bold;
+    width: 80%;
+    white-space: normal;
+    height: 25px;
+    border-radius: 15px;
+}
+
+@media (min-width: 500px) {
+    .container {
+        display: inline-block;
+        width: 450px;
+    }
+}

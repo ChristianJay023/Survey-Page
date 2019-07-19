@@ -1,0 +1,91 @@
+<div class="SurveyPage">
+  <div class="Header">
+    <div class="Title">
+      <h1>Project Satisfactory Survey</h1>
+    </div>
+    <div class="NavList">
+      <h4 class="Menu" *ngIf='doesAdminEnter' (click)='toggleDashboard()'>Dashboard</h4>
+      <h3 class="Menu" *ngIf='doesAdminEnter'>|</h3>
+      <h4 class="Menu" *ngIf='doesAdminEnter' (click)='toggleReport()'>Report</h4>
+      <h3 class="Menu" *ngIf='doesAdminEnter'>|</h3>
+      <h4 class="Menu" *ngIf='doesAdminEnter'(click)='toggleLogOut()'>Log Out</h4>
+      <h4 class="LogIn" *ngIf='!doesAdminEnter'(click)='toggleLogIn()'>Log In</h4>
+    </div>
+  </div>
+  <div class="Body">
+    <h2><strong>Brief Description:</strong></h2>
+    <h4>You are very important to us. Please help us to serve you better by taking a few minutes to answer all the
+      questions with honest answer. Just simply click the radio buttons once for each question that completely describes
+      your answer. Click the submit button once you're done. <br><br> Thank you for your assistance with this!</h4>
+  </div>
+  <form [formGroup] = 'surveyPage' (ngSubmit)='toggleSubmit()'>
+    <div class='UserEmail'>
+      <label class="Email">
+        <h6><strong>Enter your email below.</strong></h6>
+      </label>
+      <input type='text' class="EmailBox" formControlName='email'><br />
+    </div>
+    <div class='ErrorForEmail'>
+        <span *ngIf='(!surveyPage.get("email").valid && surveyPage.get("email").touched)'><strong>Invalid email.</strong></span>
+      </div>
+    <div class='QuestionContainer'>
+      <h5>1. Are you sure that the deliverables dates were met according to the final project plan?</h5>
+      <div class="Choices">
+        <input type='radio' value='Extremely Satisfied' formControlName='q1'>Extremely Satisfied<br /><br />
+        <input type='radio' value='Very Satisfied' formControlName='q1'>Very Satisfied<br /><br />
+        <input type='radio' value='Moderately Satisfied' formControlName='q1'>Moderately Satisfied<br /><br />
+        <input type='radio' value='Slightly Satisfied' formControlName='q1'>Slightly Satisfied<br /><br />
+        <input type='radio' value='Not Satisfied at All' formControlName='q1'>Not Satisfied at All<br />
+      </div>
+    </div>
+    <div class='QuestionContainer'>
+      <h5>2. Are you satisfied with the level of involvement you had on the project?</h5>
+      <div class="Choices">
+        <input type='radio' value='Extremely Satisfied' formControlName='q2'>Extremely Satisfied<br /><br />
+        <input type='radio' value='Very Satisfied' formControlName='q2'>Very Satisfied<br /><br />
+        <input type='radio' value='Moderately Satisfied' formControlName='q2'>Moderately Satisfied<br /><br />
+        <input type='radio' value='Slightly Satisfied' formControlName='q2'>Slightly Satisfied<br /><br />
+        <input type='radio' value='Not Satisfied at All' formControlName='q2'>Not Satisfied at All<br />
+      </div>
+    </div>
+    <div class='QuestionContainer'>
+      <h5>3. How satisfied are you that the status reports were clear and concise and contained enough information to
+        determine the project progress?</h5>
+      <div class="Choices">
+        <input type='radio' value='Extremely Satisfied' formControlName='q3'>Extremely Satisfied<br /><br />
+        <input type='radio' value='Very Satisfied' formControlName='q3'>Very Satisfied<br /><br />
+        <input type='radio' value='Moderately Satisfied' formControlName='q3'>Moderately Satisfied<br /><br />
+        <input type='radio' value='Slightly Satisfied' formControlName='q3'>Slightly Satisfied<br /><br />
+        <input type='radio' value='Not Satisfied at All' formControlName='q3'>Not Satisfied at All<br />
+      </div>
+    </div>
+    <div class='QuestionContainer'>
+      <h5>4. Are you satisfied with the change management process?</h5>
+      <div class="Choices">
+        <input type='radio' value='Extremely Satisfied' formControlName='q4'>Extremely Satisfied<br /><br />
+        <input type='radio' value='Very Satisfied' formControlName='q4'>Very Satisfied<br /><br />
+        <input type='radio' value='Moderately Satisfied' formControlName='q4'>Moderately Satisfied<br /><br />
+        <input type='radio' value='Slightly Satisfied' formControlName='q4'>Slightly Satisfied<br /><br />
+        <input type='radio' value='Not Satisfied at All' formControlName='q4'>Not Satisfied at All<br />
+      </div>
+    </div>
+    <div class='QuestionContainer'>
+      <h5>5. Do you think that problems were addressed and resolved in a timely manner?</h5>
+      <div class="Choices">
+        <input type='radio' value='Extremely Satisfied' formControlName='q5'>Extremely Satisfied<br /><br />
+        <input type='radio' value='Very Satisfied' formControlName='q5'>Very Satisfied<br /><br />
+        <input type='radio' value='Moderately Satisfied' formControlName='q5'>Moderately Satisfied<br /><br />
+        <input type='radio' value='Slightly Satisfied' formControlName='q5'>Slightly Satisfied<br /><br />
+        <input type='radio' value='Not Satisfied at All' formControlName='q5'>Not Satisfied at All<br />
+      </div>
+    </div>
+    <div class="Finish">
+        <ion-button class="ClickMe" (click)='ClickMe()'>Click Me!</ion-button>
+        <input class="DateTime" type='text' style='width: 350px; word-wrap: break-word' [value]='dateTime' formControlName='date-time'>
+    </div>
+    <div class="SubmitContainer"> 
+        <ion-button type='button' class="Button" (click)='toggleResetSurvey()'>Reset Survey</ion-button>
+        <ion-button type='submit' class="Button">Submit Survey</ion-button>
+    </div>
+  </form>
+</div>

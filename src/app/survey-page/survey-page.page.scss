@@ -1,0 +1,181 @@
+
+.SurveyPage {
+    background-image:url(http://www.sompaisoscatalans.cat/simage/159/1596883/work-desk-wallpaper.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:6000px;
+    overflow-y: scroll;
+}
+
+.Header {
+    display: flex;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 1px 2px 2px 1px #4682B4;
+    color: #B0E0E6;
+    text-shadow: 1px 1px grey;
+    width: 100%;
+    padding-left: 20px
+}
+
+.Title {
+    float: left; 
+    display: flex
+}
+
+.NavList {
+    float: right; 
+    margin-left: 600px; 
+    display: flex
+}
+
+.Menu {
+    vertical-align: middle;
+    line-height: 30px;
+    margin-left: 0px;
+    padding-left: 20px;
+    cursor: grabbing;
+    text-shadow: 1px 1px darkblue
+}
+
+.LogIn {
+    vertical-align: middle;
+    line-height: 30px;
+    text-align: right;
+    padding-left: 300px;
+    cursor: grabbing;
+    text-shadow: 1px 1px darkblue
+}
+
+.Body {
+    text-align: justify;
+    padding: 50px 50px 0px 50px;
+    color: white;
+    text-shadow: blue;
+    font-size: 10px;
+    max-width: 100%;
+}
+
+.Body, h4 {
+    padding-left: 20px;
+}
+
+.Body, h2 {
+    padding-top: 5px;
+}
+
+.UserEmail {
+    text-align: left;
+    margin-left: 50px;
+    display: inline-block;
+    color: white;
+}
+
+.UserEmail, label {
+    padding-left: 25px;
+}
+
+.EmailBox {
+    width: 500px; 
+    margin-right: 40px;
+    font-size: 14px;
+    border-radius: 10px;
+    height: 30px;
+    color: black;
+    text-align: center
+}
+
+.ErrorForEmail {
+    text-align: left; 
+    margin-left: 100px;
+    color: yellow;
+    padding-top: 15px;
+}
+
+.QuestionContainer {
+    display: inline-block;
+    padding: 15px;
+    text-align: left;
+    margin: 20px 50px;
+    color: white;
+    width: 90%;
+    box-shadow: 5px 5px 5px 3px white;
+    border-radius: 10px;
+} 
+
+.QuestionContainer, input {
+    float: left;
+    font-size: 15px;
+}
+
+.Choices {
+    padding: 10px 30px;
+}
+
+.Finish {
+    display: inline-block;
+    padding: 15px;
+    text-align: left;
+    margin: 20px 50px;
+    color: white;
+    width: 90%;
+    box-shadow: 5px 5px 5px 3px white;
+    display: flex;
+    border-radius: 10px;
+}
+
+.TimeBox {
+    width: 500px; 
+    margin-right: 40px;
+    font-size: 14px;
+    border-radius: 10px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    word-wrap: break-word
+}
+
+.ClickMe {
+    border-radius: 10px;
+    margin-right: 10px;
+    border: none;
+    font-weight: bold; 
+    background: mediumaquamarine;
+     border-radius: 5% 60%;
+    height: 25px;
+    transition: all 3s;
+    width: 120px;
+
+  
+  &:hover {
+    transform: rotate(1080deg);
+  }
+}
+
+.DateTime {
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.SubmitContainer {
+    display: inline-block;
+    align-content: center;
+    padding: 15px;
+    text-align: center;
+    margin: 10px 50px;
+    color: white;
+    width: 90%;
+    box-shadow: 5px 5px 5px 3px white;
+    border-radius: 10px;
+}
+
+.Button {
+    margin-right: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    width: 30%;
+}
